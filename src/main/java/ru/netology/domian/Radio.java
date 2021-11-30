@@ -22,8 +22,8 @@ public class Radio {
     }
 
     public void setCurrentRadioStation(int currentRadioStation) {
-        if (currentRadioStation < endRadioStation) {
-            if (currentRadioStation > beginRadioStation) {
+        if (currentRadioStation <= endRadioStation) {
+            if (currentRadioStation >= beginRadioStation) {
                 this.currentRadioStation = currentRadioStation;
             }
         }
@@ -56,12 +56,8 @@ public class Radio {
     }
 
     public void setVolume(int volume) {
-        if (volume < maxVolume) {
-            if (volume > minVolume) {
                 this.volume = volume;
             }
-        }
-    }
 
     public int getMinVolume() {
         return minVolume;
@@ -88,58 +84,39 @@ public class Radio {
     public int increaseRadioStation() {
         if (currentRadioStation < endRadioStation) {
             currentRadioStation = currentRadioStation + 1;
+            } else {
+                currentRadioStation = beginRadioStation;
+            }
+            return currentRadioStation;
         }
-        return currentRadioStation;
-    }
-
-    public int increaseRadioStationOverMax() {
-        if (currentRadioStation > endRadioStation) {
-            currentRadioStation = beginRadioStation;
-        }
-        return currentRadioStation;
-    }
 
     public int decreaseRadioStation() {
         if (currentRadioStation > beginRadioStation) {
             currentRadioStation = currentRadioStation - 1;
+        } else {
+            currentRadioStation = endRadioStation;
         }
         return currentRadioStation;
     }
 
-    public int decreaseRadioStationLessMin() {
-        if (currentRadioStation < beginRadioStation) {
-            currentRadioStation = endRadioStation;
-        }
-        return endRadioStation;
-    }
-
     public int increaseVolume() {
-        if (volume < maxVolume) {
-            volume = volume + 1;
+        if (volume < maxVolume){
+            volume +=1;
+        } else {
+            volume = maxVolume;
         }
         return volume;
-    }
-
-    public int increaseVolumeOverMax() {
-        if (volume == maxVolume){
-            return maxVolume;
-        }
-        return maxVolume;
     }
 
     public int decreaseVolume() {
         if(volume > minVolume) {
             volume = volume - 1;
+        } else {
+            volume = minVolume;
         }
         return volume;
     }
 
-    public int decreaseVolumeLessMin() {
-        if(volume == minVolume) {
-            return minVolume;
-        }
-        return minVolume;
-    }
-
 }
+
 
