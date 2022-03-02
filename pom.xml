@@ -18,7 +18,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.4.2</version>
+            <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -47,7 +47,7 @@
                         </goals>
                     </execution>
                     <execution>
-                        <id>report-2312312</id>
+                        <id>report</id>
                         <goals>
                             <goal>report</goal>
                         </goals>
@@ -65,9 +65,9 @@
                             <element>CLASS</element>
                             <limits>
                                 <limit>
-                                    <counter>BRANCH</counter>
+                                    <counter>LINE</counter>
                                     <value>COVEREDRATIO</value>
-                                    <minimum>95%</minimum>
+                                    <minimum>100%</minimum>
                                 </limit>
                             </limits>
                         </rule>

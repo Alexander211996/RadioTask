@@ -56,8 +56,8 @@ public class Radio {
     }
 
     public void setVolume(int volume) {
-                this.volume = volume;
-            }
+        this.volume = volume;
+    }
 
     public int getMinVolume() {
         return minVolume;
@@ -84,11 +84,11 @@ public class Radio {
     public int increaseRadioStation() {
         if (currentRadioStation < endRadioStation) {
             currentRadioStation = currentRadioStation + 1;
-            } else {
-                currentRadioStation = beginRadioStation;
-            }
-            return currentRadioStation;
+        } else {
+            currentRadioStation = beginRadioStation;
         }
+        return currentRadioStation;
+    }
 
     public int decreaseRadioStation() {
         if (currentRadioStation > beginRadioStation) {
@@ -100,8 +100,8 @@ public class Radio {
     }
 
     public int increaseVolume() {
-        if (volume < maxVolume){
-            volume +=1;
+        if (volume < maxVolume) {
+            volume += 1;
         } else {
             volume = maxVolume;
         }
@@ -109,7 +109,7 @@ public class Radio {
     }
 
     public int decreaseVolume() {
-        if(volume > minVolume) {
+        if (volume > minVolume) {
             volume = volume - 1;
         } else {
             volume = minVolume;
