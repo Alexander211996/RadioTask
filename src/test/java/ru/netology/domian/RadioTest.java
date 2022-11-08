@@ -1,6 +1,7 @@
 package ru.netology.domian;
 
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class RadioTest {
@@ -105,7 +106,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldIncreaseRadioStation(){
+    public void shouldIncreaseRadioStation() {
         Radio radio = new Radio();
         radio.setBeginRadioStation(0);
         radio.setEndRadioStation(9);
@@ -115,7 +116,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldNotIncreaseRadioStationOverMax(){
+    public void shouldNotIncreaseRadioStationOverMax() {
         Radio radio = new Radio();
         radio.setBeginRadioStation(0);
         radio.setEndRadioStation(9);
@@ -125,7 +126,7 @@ class RadioTest {
     }
 
     @Test
-    public void shouldDecreaseRadioStation(){
+    public void shouldDecreaseRadioStation() {
         Radio radio = new Radio();
         radio.setBeginRadioStation(0);
         radio.setEndRadioStation(9);
