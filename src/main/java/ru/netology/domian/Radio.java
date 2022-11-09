@@ -22,11 +22,9 @@ public class Radio {
     }
 
     public void setCurrentRadioStation(int currentRadioStation) {
-        if (currentRadioStation <= endRadioStation) {
-            if (currentRadioStation >= beginRadioStation) {
+        if (currentRadioStation >= 0 && currentRadioStation <= 9) {
                 this.currentRadioStation = currentRadioStation;
             }
-        }
     }
 
     public int getBeginRadioStation() {
